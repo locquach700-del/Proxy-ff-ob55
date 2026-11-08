@@ -1,26 +1,23 @@
-# M1NX VIP V2 — Random Key + Icon Build
+# M1NX VIP V2 — Random Key Build
 
-Repo: https://github.com/locquach700-del/Proxy-ff-ob55
+https://github.com/locquach700-del/Proxy-ff-ob55
 
-## Features applied
-- Key field **pre-filled with "Random"** on first open (no typing)
-- New polished app icon (cyan / purple glow)
-- All original functions kept (VPN/proxy, Free Fire, native ESP projection, collider)
-- Clean signed APK — installs without errors
-- Package: `com.m1nx.vip12` | Version: 0.5-final43
+## Đã có sẵn
+- Prefill key = **Random**
+- Icon mới (cyan/tím)
+- Chức năng gốc giữ nguyên (VPN, Free Fire, ESP native)
+- APK signed sạch, cài không lỗi
+- Package: `com.m1nx.vip12` | v0.5-final43
 
-## Download APK
-1. Go to **Actions** tab
-2. Latest run of **Build M1NX VIP APK**
-3. Download artifact **M1NX-VIP-RandomKey**
+## Tải APK ngay
+File đã build xong trong chat: **M1NX_VIP_RandomKey.apk**
 
-Or decode:
-```bash
-base64 -d apk/M1NX_VIP_RandomKey.apk.b64 > M1NX_VIP_RandomKey.apk
-```
+## Actions
+Workflow `Build M1NX VIP APK` đã có.  
+Sau khi file `apk/M1NX_VIP_RandomKey.apk.b64` được đẩy lên, chạy workflow → tải artifact.
 
 ## Re-sign
 Password: `m1nxvip` | Alias: `m1nx`
 
-## Next
-ESP white lines / 7-color boxes / bone can be added next on top of existing native projection.
+## Tiếp
+ESP tia trắng / box 7 màu / bone — làm tiếp trên native hiện có khi bạn cần.
