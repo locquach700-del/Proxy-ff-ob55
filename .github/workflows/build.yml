@@ -1,0 +1,25 @@
+name: Build M1NX VIP APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decode APK
+        run: |
+          base64 -d apk/M1NX_VIP_RandomKey.apk.b64 > M1NX_VIP_RandomKey.apk
+          ls -la M1NX_VIP_RandomKey.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: M1NX-VIP-RandomKey
+          path: M1NX_VIP_RandomKey.apk
+          retention-days: 90
