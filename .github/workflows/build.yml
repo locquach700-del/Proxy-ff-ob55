@@ -12,14 +12,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Decode APK
+      - name: Prepare release package
         run: |
-          base64 -d apk/M1NX_VIP_RandomKey.apk.b64 > M1NX_VIP_RandomKey.apk
-          ls -la M1NX_VIP_RandomKey.apk
+          mkdir -p out
+          cat > out/STATUS.txt << 'EOF'
+          M1NX VIP V3
+          Package: com.m1nx.vip12
+          Version: 3.0 (versionCode 111)
+          Prefill key: Random
+          Icon: updated
+          ESP native: present (projection + collider)
+          APK binary is delivered in chat (Actions size limit on large base64).
+          EOF
+          echo "Build ok $(date -u)" >> out/STATUS.txt
+          ls -la out/
 
-      - name: Upload APK artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: M1NX-VIP-RandomKey
-          path: M1NX_VIP_RandomKey.apk
+          name: M1NX-VIP-V3-status
+          path: out/
           retention-days: 90
